@@ -1,0 +1,11 @@
+version: 0.2
+env:
+  variables:
+    BUCKET: "my-glue-script-versions"   # change this to your bucket name
+phases:
+  install:
+    commands:
+      - pip install boto3
+  build:
+    commands:
+      - python upload_to_s3.py
